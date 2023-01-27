@@ -4,7 +4,6 @@
 <head>
     <title>Submit Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <script type="text/javascript" src="script.js"> </script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,7 +12,7 @@
         <form method="post">
             <p>
                 <td class="field-name">Problem:
-                    <select id="select">
+                    <select id="select" name="select">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -53,7 +52,7 @@
             </p>
 
             <p>
-                 <textarea id="submit" class="submit" rows="40" cols="100"></textarea>
+                <textarea rows="40" cols="100"></textarea>
             </p>
 
             <p>
@@ -61,10 +60,18 @@
                 <td> <input name="sourceFile" type="file" value=""></td>
             </p>
 
-            <button type="button" id="submit" class="submit" onclick="submit()">Submit</button>
+            <button type="button" class="submit" onclick="submit()">Submit</button>
+
+            <!-- create button onpressed show an alert -->
+            <script>
+                function submit() {
+                    alert("Your code has been submitted!");
+                }
+            </script>
+            
         </form>
     </div>
-
+<script src="script.js"> </script>
 </body>
 
 </html>
